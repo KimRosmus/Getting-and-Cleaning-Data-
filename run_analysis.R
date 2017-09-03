@@ -33,7 +33,7 @@ colnames(activitylabels) <- c('activityID', 'activityType')
 ## merging all data into one set
 mrg_test <-cbind(X_test, y_test, subject_test)
 mrg_train <-cbind(X_train,y_train, subject_train)
-setallinone <- rbind(mrg_test, mrg_test)
+setallinone <- rbind(mrg_test, mrg_train)
 
 ## reading colnames, setting mean and std
 colnames <- colnames(setallinone)
@@ -53,5 +53,5 @@ setwithactivitynames <- merge(setformeanandstd, activitylabels,
 sectidyset <- aggregate(. ~subjectID + activityID, setwithactivitynames, mean)
 sectidyset <- sectidyset[order(sectidyset$subjectID, sectidyset$activityID),]
 
-## second tiy data set as txt file
+## second tidy data set as txt file
 write.table (sectidyset, "sectidyset.txt", row.name = FALSE)
