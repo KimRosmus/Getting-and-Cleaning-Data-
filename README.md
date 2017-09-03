@@ -1,7 +1,7 @@
 # Getting-and-Cleaning-Data-
 Coursera Course 3 Week 4
 
-In the script you wil find:
+In the script you will find:
 
 * downloading and unzipping file
 * reading test txt files - X_test, y_test, subject_test = X_test, y_test, subject_test are data from the downloaded file
